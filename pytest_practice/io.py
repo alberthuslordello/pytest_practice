@@ -10,4 +10,5 @@ def read_file(path):
 
 def write_file(path, data):
     with open(path, "w") as f:
-        f.wirte(data)
+        for line in data:
+            f.write(str(line[0]) + '\t' + str(line[1]))

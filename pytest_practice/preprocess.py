@@ -1,5 +1,5 @@
 from .io import read_file, write_file
-from preprocessing_helpers import row_to_list, convert_to_int
+from .preprocessing_helpers import row_to_list, convert_to_int
 
 def preprocess(raw_path, clean_path):
     """
@@ -11,7 +11,7 @@ def preprocess(raw_path, clean_path):
     data = read_file(raw_path)
     clean_data = []
     for line in data:
-        line_split = row_to_list()
+        line_split = row_to_list(line)
         if line_split is None:
             continue
         element1 = convert_to_int(line_split[0])

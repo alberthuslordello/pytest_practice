@@ -1,4 +1,0 @@
-"""
-practice mocking
-
-"""
